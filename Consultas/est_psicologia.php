@@ -12,7 +12,10 @@ if ($conexion->connect_errno > 0) {
 die('Error al conectarse a la base de datos'.$conexion->connect_error);
 } else {
 }
-?>
+?>git init
+git add -A
+git commit -m 'new horizons'
+git push
 
 <html>
     <body>
