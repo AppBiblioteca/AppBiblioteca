@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once "Conexion.php";
+include_once ("php/Conexion.php");
 
 
 $query = "SELECT * FROM ESTUDIANTE";

@@ -1,10 +1,10 @@
 <?php
 $usuario="hernancely";
 $pas="";
-$db="c9";
+$db="biblioteca";
 $host="127.0.0.1";
 $conexion = mysql_connect($host, $usuario, $pas, $db);
-$query = "SELECT * FROM ESTUDIANTE WHERE carrera = 'Psicologia'";
+$query = "SELECT * FROM Empleado ";
 
 mysql_select_db("c9",$conexion);
 	$result = mysql_query($query,$conexion);

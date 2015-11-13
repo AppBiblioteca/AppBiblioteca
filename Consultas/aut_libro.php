@@ -1,9 +1,5 @@
 <?php
-$usuario="hernancely";
-$pas="";
-$db="c9";
-$host="127.0.0.1";
-$conexion = mysql_connect($host, $usuario, $pas, $db);
+include_once "php/Conexion.php";
 
 $query = "SELECT 	AUT.nombre
 FROM 	AUTOR AUT,
