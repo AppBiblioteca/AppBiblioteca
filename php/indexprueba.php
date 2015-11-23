@@ -219,7 +219,7 @@ html {
 } else {
 
     echo 'Su usuario ingreso correctamente.';
-    echo '<a href="html/index.html">Logout</a>';
+    echo '<a href="index.html">Cerrar Sesion</a>';
 
 }
 

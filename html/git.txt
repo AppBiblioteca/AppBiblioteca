@@ -1,0 +1,6 @@
+git init
+git add -A
+git commit -m 'nombre'
+git push
+hernancely
+c0510hernan

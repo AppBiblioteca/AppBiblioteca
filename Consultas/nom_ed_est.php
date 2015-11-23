@@ -3,11 +3,11 @@ $usuario="hernancely";
 $pas="";
 $db="c9";
 $host="127.0.0.1";
-$conexion = mysql_connect($host, $usuario, $pas, $db);
-$query = "SELECT nombre_est, YEAR(CURDATE())-YEAR(fecha_nac) AS edad FROM ESTUDIANTE;";
+$conexion= mysql_connect($host, $usuario, $pas, $db);
+$query= "SELECT nombre_est, YEAR(CURDATE())-YEAR(fecha_nac) AS edad FROM ESTUDIANTE;";
 
 mysql_select_db("c9",$conexion);
-	$result = mysql_query($query,$conexion);
+$result= mysql_query($query,$conexion);
 if ($conexion->connect_errno > 0) {
 die('Error al conectarse a la base de datos'.$conexion->connect_error);
 } else {
@@ -16,7 +16,7 @@ die('Error al conectarse a la base de datos'.$conexion->connect_error);
 
 <html>
     <body>
-        <table border="1px">
+<table border="1px">
     <tr>
        <th>Nombre_est</th>
        <th>edad</th>
