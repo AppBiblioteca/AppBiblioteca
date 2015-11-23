@@ -1,20 +1,12 @@
 <?php
-include_once "php/Conexion.php";
+session_start();
+include_once 'Conexion.php';
 
-$query = "SELECT 	AUT.nombre
-FROM 	AUTOR AUT,
-		LIBRO LIB,
-		LIBAUT LA	
-WHERE 	AUT.Id_Autor = LA.Id_Autor
-		AND LA.Id_Libro = LIB.Id_Libro
-		AND LIB.titulo = 'Don Quijote de la Mancha'";
+if(!mysql_select_db("biblioteca", $conexion)) 
+    die("Error: No existe la base de datos");
+$query = "SELECT * FROM CategoriaLibros";
+$result = mysql_query($query,$conexion);
 
-mysql_select_db("c9",$conexion);
-	$result = mysql_query($query,$conexion);
-if ($conexion->connect_errno > 0) {
-die('Error al conectarse a la base de datos'.$conexion->connect_error);
-} else {
-}
 ?>
 
 <html>
@@ -22,6 +14,9 @@ die('Error al conectarse a la base de datos'.$conexion->connect_error);
         <table border="1px">
     <tr>
        <th>Id_lector</th>
+       <th>Cod_est</th>
+       <th>Nom_est</th>
+     
     </tr>
     </body>
 
@@ -32,7 +27,9 @@ if (mysql_num_rows($result)!=0) {
         
         echo "<tr>";
         echo "<td>".$fila[0]."</td>";
-        echo "</tr>";
+        echo "<td>".$fila[1]."</td>";
+        echo "<td>".$fila[2]."</td>";
+
         
     }
 }

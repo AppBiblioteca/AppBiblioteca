@@ -1,12 +1,10 @@
 <?php
-session_start();
+    session_start();
+    include_once ('Conexion.php');
 
-include_once ("php/Conexion.php");
-
-
-$query = "SELECT * FROM ESTUDIANTE";
-mysql_select_db("c9",$conexion);
-$result = mysql_query($query,$conexion);
+    mysql_select_db("biblioteca", $conexion);
+    $query = "SELECT * FROM CategoriaLibros";
+    $result = mysql_query($query,$conexion);
 
 ?>
 
@@ -17,10 +15,7 @@ $result = mysql_query($query,$conexion);
        <th>Id_lector</th>
        <th>Cod_est</th>
        <th>Nom_est</th>
-       <th>Ape_est</th>
-       <th>Dir_est</th>
-       <th>Carrera</th>
-       <th>Fecha_nac</th>
+     
     </tr>
     </body>
 
@@ -33,11 +28,7 @@ if (mysql_num_rows($result)!=0) {
         echo "<td>".$fila[0]."</td>";
         echo "<td>".$fila[1]."</td>";
         echo "<td>".$fila[2]."</td>";
-        echo "<td>".$fila[3]."</td>";
-        echo "<td>".$fila[4]."</td>";
-        echo "<td>".$fila[5]."</td>";
-        echo "<td>".$fila[6]."</td>";
-        echo "</tr>";
+
         
     }
 }
