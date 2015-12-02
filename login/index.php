@@ -27,10 +27,10 @@
       <div class="modal-body">
           <form class="form col-md-12 center-block" method="post" action="Validar.php">
             <div class="form-group">
-              <input type="text" name= "usuario" id="usuario" class="form-control input-lg" placeholder="Usuario">
+              <input type="text" name= "txtusuario" id="usuario" class="form-control input-lg" placeholder="Usuario">
             </div>
             <div class="form-group">
-              <input type="password" name="pass" id="pass class="form-control input-lg" placeholder="Contraseña">
+              <input type="password" name="txtpass" id="pass class="form-control input-lg" placeholder="Contraseña">
             <div>
             <div class="form-group">
               <button class="btn btn-primary btn-lg btn-block" type="submit">Ingresar</button>
